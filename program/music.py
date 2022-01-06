@@ -1,14 +1,10 @@
-# Copyright (C) 2021 By Veez Music-Project
-# Commit Start Date 20/10/2021
-# Finished On 28/10/2021
-
 import re
 import asyncio
 
 from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2
 from driver.filters import command, other_filters
 from driver.queues import QUEUE, add_to_queue
-from driver.veez import call_py, user
+from driver.MusicPlayer import call_py, user
 from driver.utils import bash
 from pyrogram import Client
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
@@ -39,7 +35,7 @@ async def ytdl(format: str, link: str):
     return 0, stderr
 
 
-@Client.on_message(command(["mplay", f"mplay@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["play", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     await m.delete()
     replied = m.reply_to_message
