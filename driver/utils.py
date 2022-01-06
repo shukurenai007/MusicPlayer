@@ -1,6 +1,6 @@
 import os
 import asyncio
-from driver.MusicPlayer import bot, call_py
+from driver.musicplayer import bot, call_py
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from driver.queues import QUEUE, clear_queue, get_queue, pop_an_item
