@@ -84,6 +84,7 @@ python3 main.py # run the bot.
 - [Kishore](https://github.com/AASFCYBERKING) ``Dev``
 - [HACKER](https://github.com/Thiruselvan999) ``Dev``
 - [Nandha (:](https://github.com/Ctzfamily) ``Dev``
+- [LovelyBoy](https://github.com/Hodacka) ``Dev``
 - [Laky's](https://github.com/Laky-64) for [``py-tgcalls``](https://github.com/pytgcalls/pytgcalls)
 - [Dan](https://github.com/delivrance) for [``Pyrogram``](https://github.com/pyrogram)
 
