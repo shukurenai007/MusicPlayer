@@ -1,5 +1,3 @@
-# Copyright (C) 2021 Veez Project
-
 import re
 import uuid
 import socket
