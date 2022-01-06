@@ -1,5 +1,3 @@
-# Copyright (C) 2021 By VeezMusicProject
-
 from driver.queues import QUEUE
 from pyrogram import Client, filters
 from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
@@ -45,7 +43,7 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/video-stream"
+                        "🌐 Source Code", url="https://github.com/shukurenai007/MusicPlayer"
                     )
                 ],
             ]
