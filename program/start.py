@@ -12,7 +12,7 @@ from config import (
     UPDATES_CHANNEL,
 )
 from program import __version__
-from driver.veez import user
+from driver.MusicPlayer import user
 from driver.filters import command, other_filters
 from pyrogram import Client, filters
 from pyrogram import __version__ as pyrover
@@ -83,7 +83,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌐 Source Code", url="https://github.com/levina-lab/video-stream"
+                        "🌐 Source Code", url="https://github.com/shukurenai007/MusicPlayer"
                     )
                 ],
             ]
