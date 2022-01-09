@@ -124,11 +124,11 @@ async def alive(client: Client, message: Message):
 async def ping_pong(client: Client, message: Message):
     start = time()
 
-    ping1 = f"pinging..."
+    ping1 = m_reply = await message.reply_text("pinging...")
 
     delta_ping = time() - start
 
-    ping2 = f"🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`"
+    ping2 = await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
 
     keyboard = InlineKeyboardMarkup(
         [
