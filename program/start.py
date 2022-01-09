@@ -123,9 +123,30 @@ async def alive(client: Client, message: Message):
 @Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("pinging...")
+
+    ping1 = f"pinging..."
+
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+
+    ping2 = f"🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`"
+
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton(
+                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                ),
+            ]
+        ]
+    )
+   
+   await message.reply_photo(
+        photo=f"{PING_IMG}",
+        caption=ping1,
+        caption=ping2, 
+        reply_markup=keyboard,
+    )
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
