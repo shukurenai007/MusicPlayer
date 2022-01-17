@@ -3,7 +3,7 @@
     <br><b>Video Stream is an Advanced Telegram Bot that's allow you to play Video & Music on Telegram Group Video Chat</b><br>
 
 ## 📊 Stats
-[![CodeFactor](https://www.codefactor.io/repository/github/levina-lab/video-stream/badge)](https://www.codefactor.io/repository/github.com/shukurenai007/MusicPlayer)
+[![CodeFactor](https://www.codefactor.io/repository/github/shukurenai007/musicplayer/badge)](https://www.codefactor.io/repository/github/shukurenai007/musicplayer/badge)
 
 ## 🧪 Get `SESSION_NAME` from below:
 
