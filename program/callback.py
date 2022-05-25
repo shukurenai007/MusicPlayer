@@ -8,12 +8,14 @@ from config import (
     GROUP_SUPPORT,
     OWNER_NAME,
     UPDATES_CHANNEL,
+    START_IMG, 
 )
 
 
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(
+    await query.edit_message_photo(
+              photo=f"{START_IMG}", 
         f"""✨ **Welcome [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**\n
 💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) allows you to play music and video on groups through the new Telegram's video chats!**
 
@@ -54,7 +56,8 @@ async def cbstart(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbhowtouse"))
 async def cbguides(_, query: CallbackQuery):
-    await query.edit_message_text(
+    await query.edit_message_photo(
+                photo=f"{START_IMG}",
         f"""❓ **Basic Guide for using this bot:**
 
 1.) **First, add me to your group.**
@@ -77,7 +80,8 @@ async def cbguides(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbcmds"))
 async def cbcmds(_, query: CallbackQuery):
-    await query.edit_message_text(
+    await query.edit_message_photo(
+                photo=f"{START_IMG}",
         f"""✨ **Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
 
 » **press the button below to read the explanation and see the list of available commands !**
@@ -100,7 +104,8 @@ async def cbcmds(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
-    await query.edit_message_text(
+    await query.edit_message_photo(
+                photo=f"{START_IMG}",
         f"""🏮 here is the basic commands:
 
 » /play (song name/link) - play music on video chat
@@ -125,7 +130,8 @@ async def cbbasic(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, query: CallbackQuery):
-    await query.edit_message_text(
+    await query.edit_message_photo(
+                photo=f"{START_IMG}",
         f"""🏮 here is the admin commands:
 
 » /pause - pause the stream
@@ -147,7 +153,8 @@ async def cbadmin(_, query: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, query: CallbackQuery):
-    await query.edit_message_text(
+    await query.edit_message_photo(
+                photo=f"{START_IMG}",
         f"""🏮 here is the sudo commands:
 
 » /rmw - clean all raw files
